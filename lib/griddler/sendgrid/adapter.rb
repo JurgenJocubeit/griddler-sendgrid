@@ -2,7 +2,7 @@ module Griddler
   module Sendgrid
     class Adapter
       def initialize(params)
-        @params = params
+        @params = params.respond.to?(:to_h) ? params.to_h : params
       end
 
       def self.normalize_params(params)
