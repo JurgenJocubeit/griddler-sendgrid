@@ -61,11 +61,11 @@ module Griddler
       end
 
       def attachment_files
-        params.delete('attachment-info')
+        #params.delete('attachment-info')
         attachment_count = params[:attachments].to_i
 
         attachment_count.times.map do |index|
-          params.delete("attachment#{index + 1}".to_sym)
+          #params.delete("attachment#{index + 1}".to_sym)
         end
       end
     end
