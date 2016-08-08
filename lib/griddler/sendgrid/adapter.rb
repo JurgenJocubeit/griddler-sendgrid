@@ -11,7 +11,7 @@ module Griddler
       end
 
       def normalize_params
-        params.merge(
+        params.merge!(
           to: recipients(:to),
           cc: recipients(:cc),
           bcc: get_bcc,
